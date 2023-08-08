@@ -1,0 +1,11 @@
+13.226.100.5, 13.226.100.106, 13.226.100.83, ...
+Connecting to trunk.io (trunk.io)|13.226.100.5|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 287 [binary/octet-stream]
+Saving to: ‘/home/carmen/.cache/trunk/cli/tmp.wT3zk5xRrZ/launcher/latest’
+
+     0K                                                       100% 18.2M=0s
+
+utime(/home/carmen/.cache/trunk/cli/tmp.wT3zk5xRrZ/launcher/latest): No such file or directory
+2023-05-29 10:56:48 (18.2 MB/s) - ‘/home/carmen/.cache/trunk/cli/tmp.wT3zk5xRrZ/launcher/latest’ saved [287/287]
+
