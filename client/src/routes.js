@@ -4,6 +4,7 @@ import { Route, Switch, withRouter } from "react-router-dom";
 
 import Signup from "./Signup.js";
 import Login from "./Login.js";
+import Onboarding from "./Onboarding.js";
 import { SnackbarError, Home } from "./components";
 
 const Routes = (props) => {
@@ -27,9 +28,12 @@ const Routes = (props) => {
 
   const register = async (credentials) => {
     try {
+      console.log("Registering with credentials:", credentials);
       const { data } = await axios.post("/auth/register", credentials);
+      console.log("Registration response data:", data);
       await localStorage.setItem("messenger-token", data.token);
       setUser(data);
+      props.history.push("/onboarding");
     } catch (error) {
       console.error(error);
       setUser({ error: error.response.data.error || "Server Error" });
@@ -100,6 +104,7 @@ const Routes = (props) => {
           path="/register"
           render={() => <Signup user={user} register={register} />}
         />
+        <Route path="/onboarding" render={() => <Onboarding user={user} />} />
         <Route
           exact
           path="/"

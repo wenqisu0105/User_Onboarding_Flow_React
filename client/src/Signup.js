@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Grid,
   Box,
@@ -11,8 +11,6 @@ import {
 } from "@material-ui/core";
 
 const Signup = ({ user, register }) => {
-  const history = useHistory();
-
   const [formErrorMessage, setFormErrorMessage] = useState({});
 
   const handleRegister = async (event) => {
@@ -30,10 +28,6 @@ const Signup = ({ user, register }) => {
     }
     await register({ username, email, password });
   };
-
-  useEffect(() => {
-    if (user && user.id) history.push("/home");
-  }, [user, history]);
 
   return (
     <Grid container justifyContent="center">
