@@ -35,26 +35,6 @@ Instead of following the steps above, you can also use Docker to set up your env
 
 # Verify That Everything Is Set Up Correctly
 
-If your application is running correctly, you should be able to access it from your browser by going to http://localhost:3000/.
+If the application is running correctly, you should be able to access it from your browser by going to http://localhost:3000/.
 
-# Helpful Commands
 
-## Server
-
-From inside the [server](./server/) directory:
-
-- `yarn prettier --write .`: Runs autoformatter.
-- `yarn test`: This repository contains a non-comprehensive set of unit tests used to determine if your code meets the basic requirements of the assignment. **Please do not modify these tests.**
-- `yarn seed`: Resets database and populates it with sample data.
-
-## Client
-
-From inside the [client](./client/) directory:
-
-- `yarn prettier --write .`: Runs autoformatter
-- `yarn cypress run`: This repository contains a non-comprehensive set of tests used to determine if your code meets the basic requirements of the assignment. To run these tests, you must have the client running in a separate terminal. **Please do not modify these tests.**
-
-# Common Setup Errors
-
-- If you encounter an error related to `secretOrPrivateKey` when attempting to make a request, please ensure you have created a .env file in the root directory as per the _Getting Started_ instructions.
-- You might encounter `ERR_DLOPEN_FAILED` when you try to install dependencies locally then run the server in docker (or vice versa). In case of error, try removing the `node_modules` directory and restart `docker-compose up`.
